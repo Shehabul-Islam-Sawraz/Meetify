@@ -8,62 +8,79 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px',
+			},
+		},
 		extend: {
 			colors: {
 				dark: {
 					1: '#1C1F2E',
-					2: '#161925'
+					2: '#161925',
+					3: '#252A41',
+					4: '#1E2757',
+					50: "#DFDFF0",
+					75: "#dfdff2",
+					100: "#F0F2FA",
+					200: "#010101",
+					300: "#4FB7DD",
 				},
 				blue: {
-					1: '#0E78F9'
+					1: '#0E78F9',
 				},
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+				sky: {
+					1: '#C9DDFF',
+					2: '#ECF0FF',
+					3: '#F5FCFF',
 				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+				orange: {
+					1: '#FF742E',
 				},
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+				purple: {
+					1: '#830EF9',
 				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+				yellow: {
+					1: '#F9A90E',
+					100: "#8e983f",
+					300: "#edff66",
 				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+				violet: {
+					300: "#5724ff",
 				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+				try: {
+					1: "#FFDAB9",
+					2: "#B8E1DD",
+					3: "#D4C4FB",
+					4: "#F9C5D5",
+					5: "#B5D8EB",
+					9: "#50C878",
+					11: "#D4A373",
+					13: "#F4DECB",
+					14: "#6E7F80",
+					15: "#D36C33",
 				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				chart: {
-					'1': 'hsl(var(--chart-1))',
-					'2': 'hsl(var(--chart-2))',
-					'3': 'hsl(var(--chart-3))',
-					'4': 'hsl(var(--chart-4))',
-					'5': 'hsl(var(--chart-5))'
-				}
 			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
-			}
-		}
+			keyframes: {
+				'accordion-down': {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
+				},
+				'accordion-up': {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+			},
+			backgroundImage: {
+				hero: "url('/images/hero-background.png')",
+			},
+		},
 	},
 	plugins: [require("tailwindcss-animate")],
 };

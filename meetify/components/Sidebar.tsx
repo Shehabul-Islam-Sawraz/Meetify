@@ -25,6 +25,7 @@ const Sidebar = () => {
                                     'bg-blue-1': isActive,
                                 }
                             )}
+                            style={{ borderRadius: 6 }}
                         >
                             <Image
                                 src={item.imgURL}

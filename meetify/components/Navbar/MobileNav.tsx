@@ -50,6 +50,7 @@ const MobileNav = () => {
                                                         'bg-blue-1': isActive,
                                                     }
                                                 )}
+                                                style={{ borderRadius: 8 }}
                                             >
                                                 <Image
                                                     src={item.imgURL}
