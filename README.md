@@ -8,3 +8,6 @@
 
 ## Shadcn Components
 - [Sheet](https://ui.shadcn.com/docs/components/sheet)
+
+## Authentication & User Management
+- [Clerk](https://clerk.com/docs/quickstarts/nextjs)
