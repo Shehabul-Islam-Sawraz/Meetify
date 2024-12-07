@@ -8,6 +8,10 @@
 
 ## Shadcn Components
 - [Sheet](https://ui.shadcn.com/docs/components/sheet)
+- [Dialog](https://ui.shadcn.com/docs/components/dialog)
 
 ## Authentication & User Management
 - [Clerk](https://clerk.com/docs/quickstarts/nextjs)
+
+## Video and Audio Docs
+- [Stream](https://getstream.io/video/docs/react/basics/installation/)
