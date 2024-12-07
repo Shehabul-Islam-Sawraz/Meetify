@@ -4,3 +4,4 @@
 ## Resources
 - [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
 - [Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
+- [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components)
