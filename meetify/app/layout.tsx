@@ -25,7 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          socialButtonsVariant: "iconButton",
+          logoImageUrl: "/icons/meetify_logo2.png",
+        },
+        variables: {
+          colorText: "#fff",
+          colorPrimary: "#0E78F9",
+          colorBackground: "#1C1F2E",
+          colorInputBackground: "#252A41",
+          colorInputText: "#fff",
+        },
+      }}
+    >
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark-2`}

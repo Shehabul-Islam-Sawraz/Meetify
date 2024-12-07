@@ -7,7 +7,7 @@ import MobileNav from './MobileNav';
 const Navbar = () => {
     return (
         <nav className="flex-between fixed z-50 w-full bg-dark-1 px-6 py-4 lg:px-10">
-            <Link href="/" className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-2">
                 <Image
                     src="/icons/meetify.png"
                     width={32}
@@ -15,7 +15,7 @@ const Navbar = () => {
                     alt="Meetify"
                     className="max-sm:size-10"
                 />
-                <p className="text-[26px] font-extrabold text-white max-sm:hidden">
+                <p className="text-[26px] font-extrabold text-white max-sm:hidden mb-1">
                     Meetify
                 </p>
             </Link>
