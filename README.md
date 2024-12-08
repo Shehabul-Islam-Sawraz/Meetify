@@ -9,6 +9,7 @@
 ## Shadcn Components
 - [Sheet](https://ui.shadcn.com/docs/components/sheet)
 - [Dialog](https://ui.shadcn.com/docs/components/dialog)
+- [Toast](https://ui.shadcn.com/docs/components/toast)
 
 ## Authentication & User Management
 - [Clerk](https://clerk.com/docs/quickstarts/nextjs)

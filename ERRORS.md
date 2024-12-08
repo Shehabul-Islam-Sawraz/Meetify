@@ -1,4 +1,4 @@
-## Problem
+## Problem 1
 > [!CAUTION]
 > `ClerkProvider` cannot be used as a JSX component.
 
@@ -21,3 +21,12 @@ Installing `Clerk` beta version using:
     npm install @clerk/nextjs@beta
 ```
 solved me the error.
+
+
+## Problem 2
+```
+    Something went wrong. Please check the error below for more details.
+    If the problem persists, please open an issue on GitHub.
+
+    request to https://ui.shadcn.com/r/index.json failed, reason: connect ETIMEDOUT 76.76.21.241:443 
+```
