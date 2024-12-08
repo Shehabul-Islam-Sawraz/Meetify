@@ -15,3 +15,4 @@
 
 ## Video and Audio Docs
 - [Stream](https://getstream.io/video/docs/react/basics/installation/)
+- [Node SDK](https://getstream.io/video/docs/api/)
