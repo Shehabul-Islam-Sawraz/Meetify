@@ -17,3 +17,4 @@
 ## Video and Audio Docs
 - [Stream](https://getstream.io/video/docs/react/basics/installation/)
 - [Node SDK](https://getstream.io/video/docs/api/)
+- [Querying Calls](https://getstream.io/video/docs/react/guides/querying-calls/#filters)
