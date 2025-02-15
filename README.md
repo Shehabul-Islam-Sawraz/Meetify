@@ -10,6 +10,7 @@
 - [Sheet](https://ui.shadcn.com/docs/components/sheet)
 - [Dialog](https://ui.shadcn.com/docs/components/dialog)
 - [Toast](https://ui.shadcn.com/docs/components/toast)
+- [Dropdown-menu](http://ui.shadcn.com/docs/components/dropdown-menu)
 
 ## Authentication & User Management
 - [Clerk](https://clerk.com/docs/quickstarts/nextjs)

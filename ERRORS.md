@@ -30,3 +30,6 @@ solved me the error.
 
     request to https://ui.shadcn.com/r/index.json failed, reason: connect ETIMEDOUT 76.76.21.241:443 
 ```
+
+#### Solve
+Using VPN solved me this error
