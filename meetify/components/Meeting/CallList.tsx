@@ -7,8 +7,10 @@ import { useGetCalls } from '@/hooks/useGetCalls';
 import MeetingCard from '../Cards/MeetingCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useToast } from '@/hooks/use-toast';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
+    const { toast } = useToast();
     const router = useRouter();
     const { endedCalls, upcomingCalls, callRecordings, isLoading } =
         useGetCalls();
@@ -42,15 +44,19 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 
     useEffect(() => {
         const fetchRecordings = async () => {
-            const callData = await Promise.all(
-                callRecordings?.map((meeting) => meeting.queryRecordings()) ?? [],
-            );
+            try {
+                const callData = await Promise.all(
+                    callRecordings?.map((meeting) => meeting.queryRecordings()) ?? [],
+                );
 
-            const recordings = callData
-                .filter((call) => call.recordings.length > 0)
-                .flatMap((call) => call.recordings);
+                const recordings = callData
+                    .filter((call) => call.recordings.length > 0)
+                    .flatMap((call) => call.recordings);
 
-            setRecordings(recordings);
+                setRecordings(recordings);
+            } catch (error) {
+                toast({ title: 'Try again later' });
+            }
         };
 
         if (type === 'recordings') {
@@ -78,7 +84,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                         }
                         title={
                             (meeting as Call).state?.custom?.description ||
-                            (meeting as CallRecording).filename?.substring(0, 32) ||
+                            (meeting as CallRecording).filename?.substring(0, 20) ||
                             'No Description'
                         }
                         date={
