@@ -1,20 +1,24 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
     DeviceSettings,
     VideoPreview,
     useCall,
-} from '@stream-io/video-react-sdk';
+} from "@stream-io/video-react-sdk";
 
-import { Button } from '../ui/button';
+import { Button } from "../ui/button";
 
-const MeetingSetup = ({ setIsSetupComplete, }: { setIsSetupComplete: (value: boolean) => void; }) => {
+const MeetingSetup = ({
+    setIsSetupComplete,
+}: {
+    setIsSetupComplete: (value: boolean) => void;
+}) => {
     const call = useCall();
 
     if (!call) {
         throw new Error(
-            'useStreamCall must be used within a StreamCall component.',
+            "useStreamCall must be used within a StreamCall component."
         );
     }
 

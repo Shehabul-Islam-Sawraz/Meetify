@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 interface FeatureCardProps {
     className?: string;
@@ -13,32 +13,39 @@ interface FeatureCardProps {
     bgImage?: string;
 }
 
-const FeatureCard = ({ className, img, title, description, handleClick, bgImage }: FeatureCardProps) => {
+const FeatureCard = ({
+    className,
+    img,
+    title,
+    description,
+    handleClick,
+    bgImage,
+}: FeatureCardProps) => {
     return (
         <section
             className={cn(
-                'bg-orange-1 px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer relative overflow-hidden',
+                "bg-orange-1 px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer relative overflow-hidden",
                 className
             )}
             onClick={handleClick}
-        // style={{
-        //     backgroundImage: `url('./images/meeting-4.jpeg')`, // Replace 'image.png' with your image path
-        //     backgroundSize: 'cover',
-        //     backgroundRepeat: 'no-repeat',
-        //     backgroundPosition: 'center',
-        //     backgroundBlendMode: 'multiply',
-        //     opacity: 0.8, // Adjust this value to make the image less prominent
-        // }}
+            // style={{
+            //     backgroundImage: `url('./images/meeting-4.jpeg')`, // Replace 'image.png' with your image path
+            //     backgroundSize: 'cover',
+            //     backgroundRepeat: 'no-repeat',
+            //     backgroundPosition: 'center',
+            //     backgroundBlendMode: 'multiply',
+            //     opacity: 0.8, // Adjust this value to make the image less prominent
+            // }}
         >
             <div
                 className="absolute inset-0 z-0"
                 style={{
                     backgroundImage: `url(${bgImage})`, // Replace with your image path
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
                     opacity: 0.8, // Adjust transparency
-                    mixBlendMode: 'multiply', // For blending effect
+                    mixBlendMode: "multiply", // For blending effect
                 }}
             ></div>
             {/* <div className="absolute inset-0 z-0 bg-black/10"></div> */}

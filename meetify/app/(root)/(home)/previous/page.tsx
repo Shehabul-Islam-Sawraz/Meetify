@@ -1,4 +1,4 @@
-import CallList from '@/components/Meeting/CallList';
+import CallList from "@/components/Meeting/CallList";
 
 const PreviousPage = () => {
     return (

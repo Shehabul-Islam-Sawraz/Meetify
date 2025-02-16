@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
+import { useEffect, useState } from "react";
+import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 
 export const useGetCallById = (id: string | string[]) => {
     const [call, setCall] = useState<Call>();
@@ -15,8 +15,8 @@ export const useGetCallById = (id: string | string[]) => {
                 // https://getstream.io/video/docs/react/guides/querying-calls/#filters
                 const { calls } = await client.queryCalls({
                     filter_conditions: {
-                        id
-                    }
+                        id,
+                    },
                 });
 
                 if (calls.length > 0) setCall(calls[0]);

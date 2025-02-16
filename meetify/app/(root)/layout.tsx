@@ -1,6 +1,6 @@
-import StreamVideoProvider from '@/providers/StreamClientProvider'
-import { Metadata } from 'next';
-import React, { ReactNode } from 'react'
+import StreamVideoProvider from "@/providers/StreamClientProvider";
+import { Metadata } from "next";
+import React, { ReactNode } from "react";
 
 export const metadata: Metadata = {
     title: "Meetify",
@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
         <main>
-            <StreamVideoProvider>
-                {children}
-            </StreamVideoProvider>
+            <StreamVideoProvider>{children}</StreamVideoProvider>
         </main>
-    )
-}
+    );
+};
 
-export default RootLayout
+export default RootLayout;
