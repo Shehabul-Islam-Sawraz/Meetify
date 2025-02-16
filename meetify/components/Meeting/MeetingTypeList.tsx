@@ -104,7 +104,7 @@ const MeetingTypeList = () => {
             <FeatureCard
                 img="/icons/recordings.svg"
                 title="View Recordings"
-                description="Meeting Recordings"
+                description="Check out your recordings"
                 className="bg-yellow-1"
                 handleClick={() => router.push('/recordings')}
                 bgImage='./images/meeting-4.jpeg'
