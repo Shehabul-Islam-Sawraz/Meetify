@@ -15,16 +15,9 @@ export const tokenProvider = async () => {
 
     const streamClient = new StreamClient(STREAM_API_KEY, STREAM_API_SECRET);
 
-    // const expirationTime = Math.floor(Date.now() / 1000) + 3600;
-    // const issuedAt = Math.floor(Date.now() / 1000) - 60;
+    const expirationTime = Math.floor(Date.now() / 1000) + 3600;
+    const issuedAt = Math.floor(Date.now() / 1000) - 60;
 
-    // const token = streamClient.createToken(user.id, expirationTime, issuedAt);
-
-    // validity is optional (by default the token is valid for an hour)
-    const vailidity = 60 * 60;
-    const token = streamClient.generateUserToken({
-        user_id: user.id,
-        validity_in_seconds: vailidity,
-    });
+    const token = streamClient.createToken(user.id, expirationTime, issuedAt);
     return token;
 };
