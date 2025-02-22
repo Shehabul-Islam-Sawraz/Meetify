@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     },
 };
 
-const HomeLayout = ({ children }: { children: ReactNode }) => {
+const HomeLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <main className="relative">
             <Navbar />

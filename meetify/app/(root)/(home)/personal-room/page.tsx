@@ -38,19 +38,34 @@ const PersonalRoom = () => {
     const { call } = useGetCallById(meetingId!);
 
     const startRoom = async () => {
-        if (!client || !user) return;
+        if (!client || !user) {
+            toast({
+                title: "Error",
+                description: "Client or user is not available.",
+            });
 
-        const newCall = client.call("default", meetingId!);
+            return;
+        };
 
-        if (!call) {
-            await newCall.getOrCreate({
-                data: {
-                    starts_at: new Date().toISOString(),
-                },
+        try {
+            const newCall = client.call("default", meetingId!);
+
+            if (!call) {
+                await newCall.getOrCreate({
+                    data: {
+                        starts_at: new Date().toISOString(),
+                    },
+                });
+            }
+
+            router.push(`/meeting/${meetingId}?personal=true`);
+        } catch (error) {
+            console.error("Failed to start the meeting:", error);
+            toast({
+                title: "Error",
+                description: "Failed to start the meeting. Please try again.",
             });
         }
-
-        router.push(`/meeting/${meetingId}?personal=true`);
     };
 
     const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;

@@ -10,6 +10,7 @@ import MeetingModal from "./MeetingModal";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 
+import Loader from "../Loader";
 import { useToast } from "@/hooks/use-toast";
 import { Textarea } from "../ui/textarea";
 import ReactDatePicker from "react-datepicker";
@@ -77,6 +78,8 @@ const MeetingTypeList = () => {
             toast({ title: "Failed to Create Meeting" });
         }
     };
+
+    if (!client || !user) return <Loader />;
 
     const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
